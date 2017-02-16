@@ -1,51 +1,12 @@
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-}
-.pageTitle{
-  text-align: center;
-  border-color: red;
-  border-style: solid;
-  border-width: 2px;
-}
-
-.darkBody {
-  background-color: grey;
-  color: white;
-}
-
-/*.lightBody {
-  background-color: white;
-  color: black;
-}*/
-
-.container {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-.defintionContent{
+#bears, #birds, #bees {
   display: none;
 }
-.activeDef{
-  /*color: red;*/
-  display: block;
+
+#bears img, #birds img, #bees img {
+  width: 100%;
+  height: auto;
 }
-#row1{
-  height: 100%;
-  min-height: 100%;
-}
-#leftCol{
-  height: 100%;
-}
-.clickable{
-  cursor:help;
-  color: #0088cc;
-  /*cursor: sw-resize;*/
-}
-.clickable:hover{
-  text-decoration: underline;
+
+#bears p {
+  margin-top: 10px;
 }

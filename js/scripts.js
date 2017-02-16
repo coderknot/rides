@@ -1,17 +1,30 @@
-$(document).ready(function() {
-  $(".clickable").click(function() {
-    // $("p.defintionContent").addClass("activeDef");
-    // (".defintionContent").find("#" + $(this).text()).addClass("activeDef");
-    // (".defintionContent").find($(this).text()).css("color", "red");
-    $(".defintionContent").removeClass("activeDef");
-    var defOfInterest = "#" + $(this).text(); //defOfInterest is now a string
+// $(document).ready(function() {
+//   $("#animals").change(function() {
+//     this.form.submit(function(event) {
+//       event.preventDefault();
+//       alert("bear works!");
+//     });
+//   });
+// });
 
-    $(defOfInterest).addClass("activeDef"); //selecting thing that matches string value
-    // .css("color", "red");
-    $("h2").remove();
-    $("div#definitionHeading").prepend("<h2>"+$(this).text()+"</h2>");
+$(document).ready(function() {
+  $("#animals").on('change', function() {
+    var animal = $("#animals").val();
+
+    if (animal==="Bears") {
+      $("#bears").show();
+      $(".panel-default").not("#bears").hide();
+    } else if (animal==="Birds"){
+      $("#birds").show();
+      $(".panel-default").not("#birds").hide();
+
+    } else if (animal==="Bees"){
+      $("#bees").show();
+      $(".panel-default").not("#bees").hide();
+
+    }
+
+    });
   });
-  $("button#invertButton").click(function(){
-    $("body").toggleClass("darkBody");
-  })
-});
+
+  // $("div.panel panel-default:not(#bears)").hide();
